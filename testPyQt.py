@@ -47,9 +47,9 @@ class Ui_MainWindow(QtWidgets.QWidget):
         '''总布局布置好后就可以把总布局作为参数传入下面函数'''
         self.setLayout(self.__layout_main) #到这步才会显示所有控件
  
-    '''初始化所有子函数'''
+    '''初始化所有槽函数'''
     def slot_init(self):
-        print("初始化所有子函数")
+        print("初始化所有槽函数")
         self.button_open_camera.clicked.connect(self.button_open_camera_clicked)    #若该按键被点击，则调用button_open_camera_clicked()
         self.timer_camera.timeout.connect(self.show_camera) #若定时器结束，则调用show_camera()
         self.button_close.clicked.connect(self.close)#若该按键被点击，则调用close()，注意这个close是父类QtWidgets.QWidget自带的，会关闭程序
